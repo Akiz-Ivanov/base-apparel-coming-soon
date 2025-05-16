@@ -2,6 +2,7 @@ import heroDesktop from '../src/assets/images/hero-desktop.jpg'
 import heroMobile from '../src/assets/images/hero-mobile.jpg'
 import logo from '../src/assets/images/logo.svg'
 import Form from './components/Form'
+import desktopPattern from '../src/assets/images/bg-pattern-desktop.svg'
 
 function App() {
 
@@ -11,10 +12,10 @@ function App() {
         flex flex-col items-center justify-center
         md:flex-row min-h-screen w-screen"
       >
-        <div className="flex flex-col flex-grow
+        <div className={`flex flex-col flex-grow
           md:min-h-screen md:max-w-[60%] md:pl-16-136 md:pr-16-224
-          md:bg-[url('./src/assets/images/bg-pattern-desktop.svg')] md:bg-cover md:bg-no-repeat
-          bg-[linear-gradient(135deg,_hsl(0,0%,100%),_hsl(0,100%,98%))] desktop:pl-136-224" 
+          md:bg-${desktopPattern} md:bg-cover md:bg-no-repeat
+          bg-[linear-gradient(135deg,_hsl(0,0%,100%),_hsl(0,100%,98%))] desktop:pl-136-224 `}
         >
 
           <header className="min-w-full flex items-center pl-8 min-h-[5.25rem] md:my-16 md:px-0">

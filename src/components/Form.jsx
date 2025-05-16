@@ -1,4 +1,6 @@
 import { useForm } from "react-hook-form";
+import arrowIcon from "/src/assets/images/icon-arrow.svg"
+import errorIcon from "/src/assets/images/icon-error.svg"
 
 export default function Form() {
 
@@ -33,7 +35,7 @@ export default function Form() {
                 />
 
                 <img
-                    src="/src/assets/images/icon-error.svg"
+                    src={errorIcon}
                     alt="error icon"
                     className={`absolute top-1/2 -translate-y-1/2 right-error-icon w-6 h-6 
                         ${errors.email ? "block" : "hidden"}`}
@@ -47,7 +49,7 @@ export default function Form() {
                         focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
                         transition-all duration-300 ease-in-out z-10 ${errors.email ? "focus-visible:ring-soft-red" : "focus-visible:ring-desaturated-red"}`}
                 >
-                    <img src="/src/assets/images/icon-arrow.svg" alt="arrow" className="w-4 h-6" />
+                    <img src={arrowIcon} alt="arrow" className="w-4 h-6" />
                 </button>
             </form>
             
